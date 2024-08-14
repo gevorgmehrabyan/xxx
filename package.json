@@ -1,6 +1,6 @@
 {
-  "name": "pdf-generator-xxxxx-3",
-  "version": "3.0.0",
+  "name": "pdf-generator-xxxxx",
+  "version": "4.0.0",
   "description": "pdf generator tool",
   "main": "src/index.js",
   "scripts": {
