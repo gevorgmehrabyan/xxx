@@ -1,19 +1,10 @@
 {
   "name": "pdf-generator-xxxxx",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "pdf generator tool",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gevorgmehrabyan/xxx"
-  },
-  "keywords": [
-    "npm",
-    "package",
-    "awesome"
-  ],
   "author": "XXX",
   "license": "MIT",
   "scripts": {
@@ -33,12 +24,6 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "^5.5.4"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
   },
   "files": [
     "/lib"
