@@ -1,7 +1,7 @@
 import React from 'react';
 import { Document, Page, Text, PDFViewer } from '@react-pdf/renderer';
 
-export const createPDFDocument = (data: { text: string }, options: {formType: string, withPreview: boolean}): JSX.Element => {
+const createPDFDocument = (data: { text: string }, options: {formType: string, withPreview: boolean}): JSX.Element => {
     switch (options?.formType) {
         case 'FORM1': {
             return options?.withPreview ? <PDFViewer>
@@ -49,3 +49,5 @@ export const createPDFDocument = (data: { text: string }, options: {formType: st
             );
     }
 };
+
+export { createPDFDocument };
