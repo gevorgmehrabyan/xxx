@@ -1,18 +1,12 @@
 {
   "name": "pdf-generator-xxxxx",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "pdf generator tool",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build-dist": "babel src --out-dir dist --copy-files"
-  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gevorgmehrabyan/xxx"
+    "url": "git+https://github.com/gevorgmehrabyan/xxx.git"
   },
   "keywords": [
     "npm",
@@ -21,16 +15,25 @@
   ],
   "author": "XXX",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
-    "@react-pdf/renderer": "^3.0.0"
+    "@react-pdf/renderer": "^3.4.4"
   },
   "devDependencies": {
-    "@babel/cli": "^7.21.5",
-    "@babel/core": "^7.21.5",
-    "@babel/preset-env": "^7.21.5",
-    "@babel/preset-react": "^7.21.5"
+    "@types/node": "^20.14.15",
+    "@types/react": "^18.3.3",
+    "typescript": "^5.5.4"
   },
   "babel": {
-    "presets": ["@babel/preset-env", "@babel/preset-react"]
-  }
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/gevorgmehrabyan/xxx/issues"
+  },
+  "homepage": "https://github.com/gevorgmehrabyan/xxx#readme"
 }

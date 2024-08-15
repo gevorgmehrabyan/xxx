@@ -1,6 +1,7 @@
+import React from 'react';
 import { Document, Page, Text } from '@react-pdf/renderer';
 
-export const createPDFDocument = (data, formType) => {
+export const createPDFDocument = (data: { text: string }, formType: string): JSX.Element => {
     switch (formType) {
         case 'FORM1': {
             return (
