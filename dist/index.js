@@ -1,22 +1,26 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import { Document, Page, Text, renderToFile, Font } from '@react-pdf/renderer';
 import SentToLawyer from './SentToLawyer';
+// src/index.tsx
+import path from 'path';
+var getFontPath = function (fontName) { return path.join(__dirname, 'fonts', fontName); };
+// Регистрация шрифтов
 Font.register({
     family: 'Times New Roman',
     fonts: [
         {
-            src: 'src/fonts/timesNewRomanBold.ttf',
+            src: getFontPath('timesNewRomanBold.ttf'),
             fontWeight: 'bold',
         },
         {
-            src: 'src/fonts/timesNewRoman.ttf',
+            src: getFontPath('timesNewRoman.ttf'),
         },
         {
-            src: 'src/fonts/timesNewRomaItalic.ttf',
+            src: getFontPath('timesNewRomaItalic.ttf'),
             fontStyle: 'italic',
         },
         {
-            src: 'src/fonts/timesNewRomanBoldItalic.ttf',
+            src: getFontPath('timesNewRomanBoldItalic.ttf'),
             fontStyle: 'italic',
             fontWeight: 'bold',
         },
@@ -26,10 +30,10 @@ Font.register({
     family: 'Arial MT',
     fonts: [
         {
-            src: 'src/fonts/arialMT.ttf',
+            src: getFontPath('/arialMT.ttf'),
         },
         {
-            src: 'src/fonts/ArialMTBoldItalic.ttf',
+            src: getFontPath('/ArialMTBoldItalic.ttf'),
             fontStyle: 'italic',
             fontWeight: 'bold',
         },

@@ -5,7 +5,7 @@ import SentToLawyer from './SentToLawyer'
 // src/index.tsx
 import path from 'path';
 
-const getFontPath = (fontName) => path.join(__dirname, 'fonts', fontName);
+const getFontPath = (fontName: string) => path.join(__dirname, 'fonts', fontName);
 
 // Регистрация шрифтов
 Font.register({
