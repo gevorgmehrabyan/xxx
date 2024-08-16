@@ -150,6 +150,13 @@
   dependencies:
     "tslib" "^2.4.0"
 
+"@types/node@^22.3.0":
+  "integrity" "sha512-nrWpWVaDZuaVc5X84xJ0vNrLvomM205oQyLsRt7OHNZbSHslcWsvgFR7O7hire2ZonjLrWBbedmotmIlJDVd6g=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-22.3.0.tgz"
+  "version" "22.3.0"
+  dependencies:
+    "undici-types" "~6.18.2"
+
 "@types/prop-types@*":
   "integrity" "sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q=="
   "resolved" "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.12.tgz"
@@ -498,6 +505,11 @@
   "integrity" "sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q=="
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-5.5.4.tgz"
   "version" "5.5.4"
+
+"undici-types@~6.18.2":
+  "integrity" "sha512-5ruQbENj95yDYJNS3TvcaxPMshV7aizdv/hWYjGIKoANWKjhWNBsr2YEuYZKodQulB1b8l7ILOuDQep3afowQQ=="
+  "resolved" "https://registry.npmjs.org/undici-types/-/undici-types-6.18.2.tgz"
+  "version" "6.18.2"
 
 "unicode-properties@^1.4.0", "unicode-properties@^1.4.1":
   "integrity" "sha512-CLjCCLQ6UuMxWnbIylkisbRj31qxHPAurvena/0iwSVbQ2G1VY5/HjV0IRabOEbDHlzZlRdCrD4NhB0JtU40Pg=="
