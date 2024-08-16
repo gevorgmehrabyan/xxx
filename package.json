@@ -28,8 +28,7 @@
     "typescript": "^5.5.4"
   },
   "files": [
-    "lib",
-    "src/fonts"
+    "lib"
   ],
   "devDependencies": {
     "@types/node": "^22.3.0",
