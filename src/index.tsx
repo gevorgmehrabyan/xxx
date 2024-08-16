@@ -6,18 +6,18 @@ Font.register({
     family: 'Times New Roman',
     fonts: [
         {
-            src: '/fonts/timesNewRomanBold.ttf',
+            src: './fonts/timesNewRomanBold.ttf',
             fontWeight: 'bold',
         },
         {
-            src: '/fonts/timesNewRoman.ttf',
+            src: './fonts/timesNewRoman.ttf',
         },
         {
-            src: '/fonts/timesNewRomaItalic.ttf',
+            src: './fonts/timesNewRomaItalic.ttf',
             fontStyle: 'italic',
         },
         {
-            src: '/fonts/timesNewRomanBoldItalic.ttf',
+            src: './fonts/timesNewRomanBoldItalic.ttf',
             fontStyle: 'italic',
             fontWeight: 'bold',
         },
@@ -28,10 +28,10 @@ Font.register({
     family: 'Arial MT',
     fonts: [
         {
-            src: '/fonts/arialMT.ttf',
+            src: './fonts/arialMT.ttf',
         },
         {
-            src: '/fonts/ArialMTBoldItalic.ttf',
+            src: './fonts/ArialMTBoldItalic.ttf',
             fontStyle: 'italic',
             fontWeight: 'bold',
         },
