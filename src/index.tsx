@@ -1,42 +1,47 @@
 import React from 'react';
-import { Document, Page, Text, PDFViewer } from '@react-pdf/renderer';
+import { Document, Page, Text, renderToFile, Font } from '@react-pdf/renderer';
+import SentToLawyer from './SentToLawyer'
+
+Font.register({
+    family: 'Times New Roman',
+    fonts: [
+        {
+            src: '/fonts/timesNewRomanBold.ttf',
+            fontWeight: 'bold',
+        },
+        {
+            src: '/fonts/timesNewRoman.ttf',
+        },
+        {
+            src: '/fonts/timesNewRomaItalic.ttf',
+            fontStyle: 'italic',
+        },
+        {
+            src: '/fonts/timesNewRomanBoldItalic.ttf',
+            fontStyle: 'italic',
+            fontWeight: 'bold',
+        },
+    ],
+})
+
+Font.register({
+    family: 'Arial MT',
+    fonts: [
+        {
+            src: '/fonts/arialMT.ttf',
+        },
+        {
+            src: '/fonts/ArialMTBoldItalic.ttf',
+            fontStyle: 'italic',
+            fontWeight: 'bold',
+        },
+    ],
+})
 
 const createPDFDocument = (data: { text: string }, options: {formType: string, withPreview: boolean}): JSX.Element => {
     switch (options?.formType) {
-        case 'FORM1': {
-            return options?.withPreview ? <PDFViewer>
-                <Document>
-                    <Page>
-                        <Text>Form 1 With Preview</Text>
-                        <Text>{data?.text}</Text>
-                    </Page>
-                </Document>
-            </PDFViewer>  : (
-                <Document>
-                    <Page>
-                        <Text>Form 1 Without Preview</Text>
-                        <Text>{data?.text}</Text>
-                    </Page>
-                </Document>
-            );
-        }
-
-        case 'FORM2': {
-            return options?.withPreview ? <PDFViewer>
-                <Document>
-                    <Page>
-                        <Text>Form 2 With Preview</Text>
-                        <Text>{data?.text}</Text>
-                    </Page>
-                </Document>
-            </PDFViewer>  : (
-                <Document>
-                    <Page>
-                        <Text>Form 2 Without Preview</Text>
-                        <Text>{data?.text}</Text>
-                    </Page>
-                </Document>
-            );
+        case 'SentToLawyer': {
+            return <SentToLawyer data={data} withPreview={options?.withPreview} />
         }
 
         default:
@@ -50,4 +55,4 @@ const createPDFDocument = (data: { text: string }, options: {formType: string, w
     }
 };
 
-export { createPDFDocument };
+export { createPDFDocument, renderToFile };
