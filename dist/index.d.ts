@@ -1,8 +1,13 @@
+import React from 'react';
 import { renderToFile } from '@react-pdf/renderer';
-declare const createPDFDocument: (data: {
-    text: string;
-}, options: {
-    formType: string;
-    withPreview: boolean;
-}) => JSX.Element;
-export { createPDFDocument, renderToFile };
+import { DataType } from "./types";
+type Options = {
+    formType: FormType;
+    withPreview?: boolean;
+};
+declare enum FormType {
+    SentToLawyer = "SentToLawyer",
+    WriteChecks = "WriteChecks"
+}
+declare function createPDFDocument(data: DataType, options: Options): React.ReactElement;
+export { createPDFDocument, renderToFile, FormType };

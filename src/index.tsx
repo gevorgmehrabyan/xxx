@@ -4,6 +4,7 @@ import SentToLawyer from './SentToLawyer'
 
 // src/index.tsx
 import path from 'path';
+import { DataType, ISentToLawyer } from "./types";
 
 const getFontPath = (fontName: string) => path.join(__dirname, 'fonts', fontName);
 
@@ -54,10 +55,10 @@ enum FormType {
     WriteChecks = 'WriteChecks'
 }
 
-function createPDFDocument<T>(data: T, options: Options): React.ReactElement {
+function createPDFDocument(data: DataType, options: Options): React.ReactElement {
     switch (options?.formType) {
         case FormType.SentToLawyer: {
-            return <SentToLawyer data={data} withPreview={options?.withPreview} />
+            return <SentToLawyer data={data as ISentToLawyer} withPreview={options?.withPreview} />
         }
 
         default:

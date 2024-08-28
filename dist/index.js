@@ -39,13 +39,19 @@ Font.register({
         },
     ],
 });
-var createPDFDocument = function (data, options) {
+var FormType;
+(function (FormType) {
+    FormType["SentToLawyer"] = "SentToLawyer";
+    FormType["WriteChecks"] = "WriteChecks";
+})(FormType || (FormType = {}));
+function createPDFDocument(data, options) {
     switch (options === null || options === void 0 ? void 0 : options.formType) {
-        case 'SentToLawyer': {
+        case FormType.SentToLawyer: {
             return _jsx(SentToLawyer, { data: data, withPreview: options === null || options === void 0 ? void 0 : options.withPreview });
         }
         default:
             return (_jsx(Document, { children: _jsx(Page, { children: _jsx(Text, { children: data === null || data === void 0 ? void 0 : data.text }) }) }));
     }
-};
-export { createPDFDocument, renderToFile };
+}
+;
+export { createPDFDocument, renderToFile, FormType };

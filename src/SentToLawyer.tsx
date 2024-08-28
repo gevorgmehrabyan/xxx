@@ -1,19 +1,14 @@
 import React from 'react';
-import { Document, Page, Text, PDFViewer, View } from "@react-pdf/renderer";
+import { ISentToLawyer} from "./types";
 import { PDFStyles } from "./baseStyles";
+import { Document, Page, Text, PDFViewer, View } from "@react-pdf/renderer";
 
-type Props<T> = {
-    data: T;
+type Props = {
+    data: ISentToLawyer;
     withPreview?: boolean;
 };
 
-type Initial = {
-    id: number
-    initials?: string | null
-    name?: string | null
-}
-
-const SentToLawyer = <T extends { text: string; initials: Array<Initial> }>({ data, withPreview }: Props<T>) => {
+const SentToLawyer = ({ data, withPreview }: Props) => {
     const renderView = () => <Document>
         <Page size='A4' style={PDFStyles.page}>
             <View>
@@ -53,6 +48,17 @@ const SentToLawyer = <T extends { text: string; initials: Array<Initial> }>({ da
                                 <Text>Dennis Pokler</Text>
                             </View>
                         </View>
+                    </View>
+
+                    <View style={PDFStyles.flexBetween}>{
+                        data?.initials?.map((initial) =>
+                            <View>
+                                <Text>{initial?.initials || '-'}</Text>
+                                <Text>{initial?.name || '-'}</Text>
+                            </View>
+
+                            )
+                    }
                     </View>
                 </View>
 
