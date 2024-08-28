@@ -50,9 +50,9 @@ const SentToLawyer = ({ data, withPreview }: Props) => {
                         </View>
                     </View>
 
-                    <View style={PDFStyles.flexBetween}>{
+                    <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>{
                         data?.initials?.map((initial) =>
-                            <View>
+                            <View style={{ display: 'flex', flexDirection: 'column' }}>
                                 <Text>{initial?.initials || '-'}</Text>
                                 <Text>{initial?.name || '-'}</Text>
                             </View>
