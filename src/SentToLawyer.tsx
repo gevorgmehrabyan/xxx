@@ -52,7 +52,7 @@ const SentToLawyer = ({ data, withPreview }: Props) => {
 
                     <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>{
                         data?.initials?.map((initial) =>
-                            <View style={{ display: 'flex', flexDirection: 'column' }}>
+                            <View key={initial?.id} style={{ display: 'flex', flexDirection: 'column', marginBottom: 16, width: '33%' }}>
                                 <Text>{initial?.initials || '-'}</Text>
                                 <Text>{initial?.name || '-'}</Text>
                             </View>
