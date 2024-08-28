@@ -44,9 +44,19 @@ Font.register({
     ],
 })
 
-const createPDFDocument = (data: { text: string }, options: {formType: string, withPreview: boolean}): JSX.Element => {
+type Options = {
+    formType: FormType;
+    withPreview?: boolean;
+};
+
+enum FormType {
+    SentToLawyer = 'SentToLawyer',
+    WriteChecks = 'WriteChecks'
+}
+
+function createPDFDocument<T>(data: T, options: Options): React.ReactElement {
     switch (options?.formType) {
-        case 'SentToLawyer': {
+        case FormType.SentToLawyer: {
             return <SentToLawyer data={data} withPreview={options?.withPreview} />
         }
 
@@ -61,4 +71,4 @@ const createPDFDocument = (data: { text: string }, options: {formType: string, w
     }
 };
 
-export { createPDFDocument, renderToFile };
+export { createPDFDocument, renderToFile, FormType };

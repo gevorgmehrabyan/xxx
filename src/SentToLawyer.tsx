@@ -2,12 +2,18 @@ import React from 'react';
 import { Document, Page, Text, PDFViewer, View } from "@react-pdf/renderer";
 import { PDFStyles } from "./baseStyles";
 
-type Props = {
-    data: { text: string },
-    withPreview?: boolean
+type Props<T> = {
+    data: T;
+    withPreview?: boolean;
+};
+
+type Initial = {
+    id: number
+    initials?: string | null
+    name?: string | null
 }
 
-const SentToLawyer = ({data, withPreview}: Props) => {
+const SentToLawyer = <T extends { text: string; initials: Array<Initial> }>({ data, withPreview }: Props<T>) => {
     const renderView = () => <Document>
         <Page size='A4' style={PDFStyles.page}>
             <View>
