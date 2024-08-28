@@ -8,7 +8,6 @@ import { DataType, ISentToLawyer } from "./types";
 
 const getFontPath = (fontName: string) => path.join(__dirname, 'fonts', fontName);
 
-// Регистрация шрифтов
 Font.register({
     family: 'Times New Roman',
     fonts: [

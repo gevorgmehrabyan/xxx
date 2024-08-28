@@ -1,10 +1,10 @@
 {
   "name": "pdf-generator-xxxxx",
-  "version": "8.0.16",
+  "version": "8.0.17",
   "description": "pdf generator tool",
-  "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "types": "./lib/cjs/index.d.ts",
   "license": "MIT",
   "scripts": {
     "build:esm": "tsc",
