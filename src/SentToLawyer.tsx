@@ -50,14 +50,13 @@ const SentToLawyer = ({ data, withPreview }: Props) => {
                         </View>
                     </View>
 
-                    <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>{
+                    <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap', marginTop: 16}}>{
                         data?.initials?.map((initial) =>
-                            <View key={initial?.id} style={{ display: 'flex', flexDirection: 'column', marginBottom: 16, width: '33%' }}>
+                            <View key={initial?.id} style={{ display: 'flex', flexDirection: 'column', marginBottom: 16, width: '25%' }}>
                                 <Text>{initial?.initials || '-'}</Text>
                                 <Text>{initial?.name || '-'}</Text>
                             </View>
-
-                            )
+                        )
                     }
                     </View>
                 </View>
