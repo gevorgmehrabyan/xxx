@@ -1,6 +1,6 @@
 {
   "name": "pdf-generator-xxxxx",
-  "version": "8.0.18",
+  "version": "8.0.19",
   "description": "pdf generator tool",
   "module": "./lib/esm/index.js",
   "main": "./lib/cjs/index.js",
