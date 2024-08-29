@@ -20,7 +20,7 @@ export interface ISentToLawyer {
     lawyer?: Maybe<Lawyer>;
     selectedInitial?: Initial;
     currentDate?: Maybe<string>;
-    netAmount?: Maybe<number>;
+    netAmount?: Maybe<string>;
     billingBasis?: Maybe<string>;
     allLossesCaseAmount?: Maybe<string>;
     selectedDetails?: Maybe<Array<Maybe<string>>>;

@@ -1,6 +1,6 @@
 {
   "name": "pdf-generator-xxxxx",
-  "version": "8.0.19",
+  "version": "8.0.20",
   "description": "pdf generator tool",
   "module": "./lib/esm/index.js",
   "main": "./lib/cjs/index.js",
@@ -14,7 +14,6 @@
     "build": "yarn build:esm && yarn build:cjs && yarn copy:fonts"
   },
   "peerDependencies": {
-    "@react-pdf/renderer": "^3.4.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
