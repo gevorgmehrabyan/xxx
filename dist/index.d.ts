@@ -1,5 +1,5 @@
-import React from 'react';
-import { renderToFile } from '@react-pdf/renderer';
+import React from "react";
+import { renderToFile } from "@react-pdf/renderer";
 import { DataType } from "./types";
 type Options = {
     formType: FormType;
