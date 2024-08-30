@@ -46,7 +46,8 @@ var FormType;
     FormType["SentToLawyer"] = "SentToLawyer";
     FormType["WriteChecks"] = "WriteChecks";
 })(FormType || (FormType = {}));
-function createPDFDocument(data, options) {
+function generatePDFDocument(_a) {
+    var data = _a.data, options = _a.options;
     switch (options === null || options === void 0 ? void 0 : options.formType) {
         case FormType.SentToLawyer: {
             return (_jsx(SentToLawyer, { data: data, withPreview: options === null || options === void 0 ? void 0 : options.withPreview }));
@@ -58,4 +59,4 @@ function createPDFDocument(data, options) {
             return (_jsx(Document, { children: _jsx(Page, { children: _jsx(Text, { children: "Default PDF View Content" }) }) }));
     }
 }
-export { createPDFDocument, renderToFile, FormType };
+export { generatePDFDocument, renderToFile, FormType };

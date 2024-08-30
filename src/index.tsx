@@ -51,15 +51,17 @@ type Options = {
   withPreview?: boolean;
 };
 
+type Props = {
+  options: Options;
+  data: DataType;
+};
+
 enum FormType {
   SentToLawyer = "SentToLawyer",
   WriteChecks = "WriteChecks",
 }
 
-function createPDFDocument(
-  data: DataType,
-  options: Options,
-): React.ReactElement {
+function generatePDFDocument({ data, options }: Props): React.ReactElement {
   switch (options?.formType) {
     case FormType.SentToLawyer: {
       return (
@@ -90,4 +92,4 @@ function createPDFDocument(
   }
 }
 
-export { createPDFDocument, renderToFile, FormType };
+export { generatePDFDocument, renderToFile, FormType };

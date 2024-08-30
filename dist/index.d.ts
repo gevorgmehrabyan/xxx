@@ -5,9 +5,13 @@ type Options = {
     formType: FormType;
     withPreview?: boolean;
 };
+type Props = {
+    options: Options;
+    data: DataType;
+};
 declare enum FormType {
     SentToLawyer = "SentToLawyer",
     WriteChecks = "WriteChecks"
 }
-declare function createPDFDocument(data: DataType, options: Options): React.ReactElement;
-export { createPDFDocument, renderToFile, FormType };
+declare function generatePDFDocument({ data, options }: Props): React.ReactElement;
+export { generatePDFDocument, renderToFile, FormType };
